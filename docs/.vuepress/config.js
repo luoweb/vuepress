@@ -1,15 +1,16 @@
 module.exports = {
+  base:'/vuepress/',
   dest: 'vuepress',
   locales: {
+    // '/en': {
+    //   lang: 'en-US',
+    //   title: 'VuePress',
+    //   description: 'Vue-powered Static Site Generator'
+    // },
     '/': {
-      lang: 'en-US',
-      title: 'VuePress',
-      description: 'Vue-powered Static Site Generator'
-    },
-    '/zh/': {
       lang: 'zh-CN',
-      title: 'VuePress',
-      description: 'Vue 驱动的静态网站生成器'
+      title: 'ROWEB',
+      description: '坚持 分享 超脱 存在'
     }
   },
   head: [
@@ -26,60 +27,83 @@ module.exports = {
   serviceWorker: true,
   theme: 'vue',
   themeConfig: {
-    repo: 'vuejs/vuepress',
+    repo: 'luoweb/vuepress',
     editLinks: true,
     docsDir: 'docs',
     serviceWorker: {
       updatePopup: true
     },
     locales: {
+      // '/en': {
+      //   label: 'English',
+      //   selectText: 'Languages',
+      //   editLinkText: 'Edit this page on GitHub',
+      //   lastUpdated: 'Last Updated',
+      //   nav: [
+      //     {
+      //       text: 'Guide',
+      //       link: '/en/guide/',
+      //     },
+      //     {
+      //       text: 'Config Reference',
+      //       link: '/en/config/'
+      //     },
+      //     {
+      //       text: 'Default Theme Config',
+      //       link: '/en/default-theme-config/'
+      //     },
+      //     {
+      //       text: 'Changelog',
+      //       link: 'https://github.com/vuejs/vuepress/blob/master/CHANGELOG.md'
+      //     }
+      //   ],
+      //   sidebar: {
+      //     '/en/guide/': genSidebarConfig('Guide')
+      //   }
+      // },
       '/': {
-        label: 'English',
-        selectText: 'Languages',
-        editLinkText: 'Edit this page on GitHub',
-        lastUpdated: 'Last Updated',
-        nav: [
-          {
-            text: 'Guide',
-            link: '/guide/',
-          },
-          {
-            text: 'Config Reference',
-            link: '/config/'
-          },
-          {
-            text: 'Default Theme Config',
-            link: '/default-theme-config/'
-          },
-          {
-            text: 'Changelog',
-            link: 'https://github.com/vuejs/vuepress/blob/master/CHANGELOG.md'
-          }
-        ],
-        sidebar: {
-          '/guide/': genSidebarConfig('Guide')
-        }
-      },
-      '/zh/': {
         label: '简体中文',
         selectText: '选择语言',
         editLinkText: '在 GitHub 上编辑此页',
         lastUpdated: '上次更新',
         nav: [
           {
-            text: '指南',
-            link: '/zh/guide/',
+            text: '前端技术',
+            link: '/zh/frontend/',
+            items: [
+              { text: 'JAVASCRIPT', link: '/frontend/javascript' },
+              { text: 'HTML', link: '/frontend/html' },
+              { text: 'CSS', link: '/frontend/css' },
+              { text: 'VUE', link: '/frontend/vuejs' },
+              { text: '小程序', link: '/frontend/miniapp' }
+            ]
           },
           {
-            text: '配置',
-            link: '/zh/config/'
+            text: '后端技术',
+            link: '/zh/backend/',
+            items: [
+              { text: 'JAVA', link: '/backend/java' },
+              { text: 'NODEJS', link: '/backend/nodejs' },
+              { text: 'GO', link: '/backend/go' },
+              { text: 'PYTHON', link: '/backend/python' },
+              { text: 'DB', link: '/backend/db' }
+            ]
           },
           {
-            text: '默认主题',
-            link: '/zh/default-theme-config/'
+            text: '架构设计',
+            link: '/zh/architect/',
+            items: [
+              { text: '算法', link: '/architect/algorithm' },
+              { text: '数据结构', link: '/architect/datastrueture' },
+              { text: '区块链', link: '/architect/blockchain' }
+            ]
           },
           {
-            text: 'Changelog',
+            text: '日常笔记',
+            link: '/zh/notebook/'
+          },          
+          {
+            text: '最新',
             link: 'https://github.com/vuejs/vuepress/blob/master/CHANGELOG.md'
           }
         ],

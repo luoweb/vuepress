@@ -37,5 +37,5 @@ echo "force deploy to git@gitee.com:roweb/roweb.git master"
 git push -f git@gitee.com:roweb/roweb.git master
 cd ..
 
-gsed -i "s#//base:'/home/',#,base:'/vuepress/,#g" ${config_dir}
+gsed -i "s#//base:'/home/',#base:'/vuepress/,#g" ${config_dir}
 cd -

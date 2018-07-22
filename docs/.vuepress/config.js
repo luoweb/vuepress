@@ -71,31 +71,31 @@ module.exports = {
             text: '前端技术',
             link: '/zh/frontend/',
             items: [
-              { text: 'JAVASCRIPT', link: '/frontend/javascript' },
-              { text: 'HTML', link: '/frontend/html' },
-              { text: 'CSS', link: '/frontend/css' },
-              { text: 'VUE', link: '/frontend/vuejs' },
-              { text: '小程序', link: '/frontend/miniapp' }
+              { text: 'JAVASCRIPT', link: '/zh/frontend/javascript/' },
+              { text: 'HTML', link: '/zh/frontend/html/' },
+              { text: 'CSS', link: '/zh/frontend/css/' },
+              { text: 'VUE', link: '/zh/frontend/vuejs' },
+              { text: 'MINIAPP', link: '/zh/frontend/miniapp' }
             ]
           },
           {
             text: '后端技术',
             link: '/zh/backend/',
             items: [
-              { text: 'JAVA', link: '/backend/java' },
-              { text: 'NODEJS', link: '/backend/nodejs' },
-              { text: 'GO', link: '/backend/go' },
-              { text: 'PYTHON', link: '/backend/python' },
-              { text: 'DB', link: '/backend/db' }
+              { text: 'JAVA', link: '/zh/backend/java/' },
+              { text: 'NODEJS', link: '/zh/backend/nodejs/' },
+              { text: 'GO', link: '/zh/backend/go/' },
+              { text: 'PYTHON', link: '/zh/backend/python/' },
+              { text: 'DB', link: '/zh/backend/db/' },
+              { text: '区块链', link: '/zh/architect/blockchain/' }
             ]
           },
           {
-            text: '架构设计',
+            text: '基础架构',
             link: '/zh/architect/',
             items: [
-              { text: '算法', link: '/architect/algorithm' },
-              { text: '数据结构', link: '/architect/datastrueture' },
-              { text: '区块链', link: '/architect/blockchain' }
+              { text: '算法', link: '/zh/architect/algorithm/' },
+              { text: '数据结构', link: '/zh/architect/datastructure/' }
             ]
           },
           {
@@ -108,7 +108,8 @@ module.exports = {
           }
         ],
         sidebar: {
-          '/zh/guide/': genSidebarConfig('指南')
+          '/zh/guide/': genSidebarConfig('指南'),
+          '/zh/frontend/': genSidebarFrontend('前端技术')
         }
       }
     }
@@ -130,6 +131,22 @@ function genSidebarConfig (title) {
         'custom-themes',
         'i18n',
         'deploy'
+      ]
+    }
+  ]
+}
+function genSidebarFrontend (title) {
+  return [
+    {
+      title,
+      collapsable: false,
+      children: [
+        '',
+        'HTML',
+        'CSS',
+        'javascript',
+        'VUE',
+        'MINIAPP'
       ]
     }
   ]
